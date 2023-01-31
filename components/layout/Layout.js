@@ -3,7 +3,7 @@ import React from "react";
 
 function Layout({ children }) {
   return (
-    <>
+    <div>
       <header className="w-full h-16 bg-black ">
         <div className="flex justify-between max-w-4xl m-auto ">
           <div className="mx-5 my-5">
@@ -19,11 +19,11 @@ function Layout({ children }) {
           </div>
         </div>
       </header>
-      <div className="h-screen ">{children}</div>
-      <footer className="text-center bg-green-400  h-9 text-black font-medium">
-        <span> nextjs course | Foodowoo project @copyright </span>
+      <div>{children}</div>
+      <footer className="text-center bg-green-400  h-9 text-black font-bold my-auto ">
+        <span className="my-auto"> nextjs course | Foodowoo project @copyright </span>
       </footer>
-    </>
+    </div>
   );
 }
 
