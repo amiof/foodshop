@@ -1,6 +1,6 @@
 function Location() {
   return (
-    <svg width="20px" height="15px" viewBox="0 0 24 24" fill="none">
+    <svg width="20px" height="15px" viewBox="0 0 24 24" fill="#ffffff">
       <g id="style=linear">
         <g id="location">
           <path
@@ -9,14 +9,7 @@ function Location() {
             stroke="grey"
             strokeWidth="1.5"
           />
-          <circle
-            id="ellipse"
-            cx="12"
-            cy="9.5"
-            r="2.5"
-            stroke="grey"
-            strokeWidth="1.5"
-          />
+          <circle id="ellipse" cx="12" cy="9.5" r="2.5" stroke="grey" strokeWidth="1.5" />
         </g>
       </g>
     </svg>
