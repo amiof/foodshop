@@ -6,12 +6,12 @@ function Layout({ children }) {
     <div>
       <header className="w-full h-16 bg-black ">
         <div className="flex justify-between max-w-4xl m-auto ">
-          <div className="mx-5 my-5">
+          <div className=" my-5">
             <Link href="/" className="text-green-500 font-bold ">
               FoodoWoo!!
             </Link>
           </div>
-          <div className="mx-5 my-5 text-white">
+          <div className=" my-5 text-white">
             <Link href="/menu" className="mx-5">
               menu
             </Link>
