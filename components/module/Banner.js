@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 function Banner() {
   return (
@@ -11,6 +12,11 @@ function Banner() {
               BotoFood is an online food ordering and delivery platform launched by Uber in 2014.
               Meals are delivered by couriers using cars, scooters, bikes, or on foot.
             </span>
+            <Link href="/menu">
+              <button className="font-bold text-black bg-green-500 w-24 h-10 mt-14 rounded-md ">
+                start
+              </button>
+            </Link>
           </div>
         </div>
         <div className="ml-10 mt-20">
