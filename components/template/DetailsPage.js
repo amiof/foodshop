@@ -5,7 +5,7 @@ const DetailsPage = (props) => {
   const { id, name, price, discount, introduction, details, ingredients, recipe } = props;
 
   return (
-    <div className="max-w-4xl m-auto mt-24 bg-black h-screen">
+    <div className="max-w-4xl mx-auto mt-24 bg-black min-h-full ">
       <h1 className="font-bold text-green-500 border-b border-b-green-500 p-3">details</h1>
       <div className="flex mt-8">
         <img src={`/images/${id}.jpeg`} className="w-72 " />
@@ -33,9 +33,24 @@ const DetailsPage = (props) => {
         <p className="text-white">{introduction}</p>
       </div>
 
-      <div className="mt-5">
-        <p className="text-green-500 font-bold">Ditails</p>
-        {details.map((item) => {})}
+      <div className="mt-5 text-white min-h-full ">
+        <p className="text-green-500 font-bold mb-10">Ditails</p>
+        {details.map((item, index) => (
+          <span key={index} className="flex">
+            <p className="text-white"> {Object.keys(item)[0]}:</p>
+            <p className="ml-5">{Object.values(item)[0]}</p>
+          </span>
+        ))}
+        <p className="text-green-500 my-5 font-bold">ingredients</p>
+        {ingredients.map((item, index) => (
+          <p key={index} className="text-white">
+            {item}
+          </p>
+        ))}
+        <p className="text-green-500 font-bold my-5">recipe</p>
+        {recipe.map((item, index) => (
+          <p key={index}>{item}</p>
+        ))}
       </div>
     </div>
   );
