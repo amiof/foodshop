@@ -1,7 +1,9 @@
 import { useRouter } from "next/router";
 import React, { useState } from "react";
+import Card from "../module/Card.js";
 
-const CategoryPage = () => {
+const CategoryPage = ({ data }) => {
+  console.log(data);
   const [query, setQuery] = useState({ difficulty: "", time: "" });
   const router = useRouter();
   const chengeHandler = (e) => {
@@ -20,10 +22,10 @@ const CategoryPage = () => {
           onChange={chengeHandler}
           value={query.difficulty}
         >
-          <option value="">difficulty</option>
-          <option value="easy">Easy</option>
-          <option value="medium">Medium</option>
-          <option value="hard">Hard</option>
+          <option value="empety">difficulty</option>
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
         </select>
         <select
           className="text-green-600 font-bold ml-14 px-3 py-2 rounded-md"
@@ -31,7 +33,7 @@ const CategoryPage = () => {
           onChange={chengeHandler}
           value={query.time}
         >
-          <option value="">Cooking Time</option>
+          <option value="empety">Cooking Time</option>
           <option value="more">More tham 30 min </option>
           <option value="less">Letter than 30 min </option>
         </select>
@@ -43,6 +45,7 @@ const CategoryPage = () => {
           search{" "}
         </button>
       </div>
+      <div className="flex gap-10 flex-wrap">{data && data.map((item) => <Card {...item} />)}</div>
     </div>
   );
 };
