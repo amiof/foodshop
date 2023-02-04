@@ -20,7 +20,7 @@ function Layout({ children }) {
         </div>
       </header>
       <div className="min-h-full flex flex-col">
-        <div className="mb-20">{children}</div>
+        <div className="mb-20 flex-grow">{children}</div>
         <footer className="text-center bg-green-400  h-9 text-black font-bold mt-auto ">
           <span className="my-auto"> nextjs course | Foodowoo project @copyright </span>
         </footer>
