@@ -28,7 +28,7 @@ export async function getStaticProps(context) {
     };
   }
 
-  console.log(data);
+  // console.log(data);
   return {
     props: { data },
     revalidate: 10,
